@@ -1,0 +1,124 @@
+/* عام */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #000000; /* خلفية سوداء دافئة */
+    color: #e0e0e0; /* نصوص بلون فاتح للتباين مع الخلفية */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* لمنع تمرير الصفحة بسبب التأثير */
+}
+
+/* الحاوية الرئيسية */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* الآلة الحاسبة */
+.calculator {
+    background: rgba(0, 0, 0, 0.8); /* خلفية داكنة للمربع */
+    border-radius: 12px;
+    padding: 30px; /* تقليل padding */
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.7); /* تأثير إضاءة خافتة باللون الأزرق */
+    max-width: 400px; /* تقليل أقصى عرض */
+    width: 100%;
+    text-align: center;
+    position: relative;
+    animation: glow 1.5s infinite alternate; /* تأثير الوميض المتحرك */
+}
+
+/* تأثير الوميض المتحرك */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+    }
+}
+
+/* العنوان */
+h1 {
+    font-size: 28px; /* تقليل حجم العنوان */
+    font-weight: 700;
+    color: #ffffff; /* لون النص أبيض */
+    margin-bottom: 20px;
+}
+
+/* التسمية */
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #e0e0e0; /* لون نصوص التسمية فاتح */
+    margin-bottom: 12px;
+}
+
+/* الإدخالات */
+input {
+    width: calc(100% - 24px);
+    padding: 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    outline: none;
+    background: #222; /* خلفية رمادية داكنة للإدخالات */
+    color: #e0e0e0; /* نصوص الإدخالات بلون فاتح */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #007bff; /* لون الحدود عند التركيز */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* ظل ملون عند التركيز */
+}
+
+/* الزر */
+button {
+    padding: 15px 30px;
+    background: #007bff; /* لون الزر الأزرق */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #0056b3; /* لون الزر عند المرور */
+    transform: scale(1.05);
+}
+
+/* النتيجة */
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #e0e0e0; /* لون النصوص بلون فاتح */
+    margin-top: 20px;
+}
+
+/* نص النتيجة */
+#result {
+    font-size: 22px;
+    font-weight: 700;
+    color: #007bff; /* لون النص الأزرق للنتيجة */
+    margin-top: 10px;
+}
+
+/* التذييل */
+.footer {
+    margin-top: 20px; /* تقليل المسافة بين المربع ونص الاستغفار */
+    font-size: 22px; /* زيادة حجم الخط */
+    color: #e81c1c; /* لون النص */
+    font-family: 'Courier', monospace;
+    background: rgba(0, 0, 0, 0.8); /* خلفية داكنة نصف شفافة للتباين */
+    padding: 15px 25px; /* زيادة padding لتحسين المظهر */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* تأثير إضاءة خافتة باللون الأزرق */
+    text-align: center;
+}

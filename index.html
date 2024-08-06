@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة المؤهلة والمعدل الجامعي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>حاسبة المؤهلة والمعدل الجامعي</h1>
+            <label for="moahla">المؤهلة:</label>
+            <input type="number" id="moahla" name="moahla" step="0.01" min="80" max="100" required>
+
+            <label for="gpa">المعدل الجامعي:</label>
+            <input type="number" id="gpa" name="gpa" step="0.01" min="0" max="5" required>
+
+            <button onclick="calculate()">احسب</button>
+
+            <h2>النتيجة:</h2>
+            <p id="result"></p>
+        </div>
+
+        <footer class="footer">
+            <h2>أستغفر الله وأتوب إليه</h2>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
